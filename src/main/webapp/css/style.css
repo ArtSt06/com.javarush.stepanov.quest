@@ -1,0 +1,195 @@
+:root {
+    --primary-text-color: rgb(240, 248, 255);
+    --secondary-text-color: rgb(217, 255, 207);
+
+    --primary-background-color: rgb(71, 71, 71);
+    --secondary-background-color: rgb(26, 26, 26);
+    --tertiary-background-color: rgb(35, 35, 36);
+
+    --primary-border-color: rgb(92, 92, 92);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    color: var(--primary-text-color);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tertiary-background-color);
+}
+
+.container {
+    max-width: 576px;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    aspect-ratio: 8 / 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+
+    border: 1px solid var(--primary-border-color);
+    border-radius: 6px;
+
+    background: var(--secondary-background-color);
+}
+
+.custom-button {
+    max-width: 156px;
+    width: 100%;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 4px;
+    outline: none;
+
+    background: var(--primary-border-color);
+
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    transform: translateY(0);
+}
+
+.start-button {
+    max-width: 256px;
+    padding: 12px 16px;
+}
+
+.starting-menu {
+    max-width: 620px;
+    height: fit-content;
+    padding: 12px 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.greeting > h1 {
+    font-size: 26px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-border-color);
+}
+
+.greeting .greeting-text {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.greeting .greeting-text > span {
+    width: 100%;
+
+    display: inline-block;
+    text-align: left;
+}
+
+.user-intro-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-intro-form input {
+    max-width: 160px;
+    padding: 3px 6px;
+
+    background: var(--primary-background-color);
+
+    outline: none;
+
+    font-weight: 600;
+}
+
+.user-stats {
+    width: 100%;
+    max-height: fit-content;
+    padding: 8px 78px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+
+    border: 2px solid var(--primary-border-color);
+
+    background: var(--primary-background-color);
+}
+
+.user-stats .stat:first-of-type {
+    max-width: 100%;
+    width: 100%;
+}
+
+.user-stats .stat > span {
+    font-weight: 600;
+    text-overflow: ellipsis;
+    color: var(--secondary-text-color);
+}
+
+.question-wrapper,
+.result-wrapper {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.question-wrapper .question,
+.result-wrapper .result {
+    padding: 0 24px;
+}
+
+.answer-options {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.result-wrapper form {
+    display: flex;
+    justify-content: center;
+}
+
+.result-wrapper .custom-button {
+    max-width: 170px;
+}

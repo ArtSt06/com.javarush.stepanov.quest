@@ -1,0 +1,93 @@
+{
+  "intro": "Вы очнулись в тёмном лесу, полном опасностей. Ваша цель — найти выход и вернуться домой. Но будьте осторожны: каждый выбор может привести к победе или поражению. Удачи!",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Вы стоите на развилке в тёмном лесу. Куда пойдёте?",
+      "answers": [
+        {
+          "id": 11,
+          "text": "Налево",
+          "nextQuestionId": 2,
+          "terminal": false,
+          "resultText": null,
+          "result": null
+        },
+        {
+          "id": 12,
+          "text": "Направо",
+          "nextQuestionId": 3,
+          "terminal": false,
+          "resultText": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Вы пошли налево и встретили волка. Ваши действия?",
+      "answers": [
+        {
+          "id": 21,
+          "text": "Убежать",
+          "nextQuestionId": 4,
+          "terminal": false,
+          "resultText": null,
+          "result": null
+        },
+        {
+          "id": 22,
+          "text": "Сразиться",
+          "nextQuestionId": null,
+          "terminal": true,
+          "resultText": "Волк оказался сильнее вас. Поражение!",
+          "result": "LOSE"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Вы пошли направо и наткнулись на ведьму. Что делать?",
+      "answers": [
+        {
+          "id": 31,
+          "text": "Напасть",
+          "nextQuestionId": null,
+          "terminal": true,
+          "resultText": "Ведьма превратила вас в лягушку. Поражение!",
+          "result": "LOSE"
+        },
+        {
+          "id": 32,
+          "text": "Подкупить",
+          "nextQuestionId": 4,
+          "terminal": false,
+          "resultText": null,
+          "result": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Вы видите сундук посреди поляны. Ваши действия?",
+      "answers": [
+        {
+          "id": 41,
+          "text": "Открыть",
+          "nextQuestionId": null,
+          "terminal": true,
+          "resultText": "Сундук оказался мимиком и напал на вас. Поражение!",
+          "result": "LOSE"
+        },
+        {
+          "id": 42,
+          "text": "Уйти",
+          "nextQuestionId": null,
+          "terminal": true,
+          "resultText": "Вы решили не рисковать и через некоторое время нашли выход из леса. Победа!",
+          "result": "WIN"
+        }
+      ]
+    }
+  ]
+}
