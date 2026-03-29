@@ -17,6 +17,6 @@ public class StartController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute(ATTR_INTRO, QuestData.getIntro());
-        req.getRequestDispatcher("/WEB-INF/start.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/start.jsp").forward(req, resp);
     }
 }

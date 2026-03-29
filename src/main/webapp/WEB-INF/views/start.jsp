@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <form action="${pageContext.request.contextPath}/answer"
+        <form action="${pageContext.request.contextPath}/game"
               method="post"
               class="user-intro-form"
         >

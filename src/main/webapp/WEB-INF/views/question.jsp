@@ -21,7 +21,7 @@
         <div class="question-wrapper">
             <p class="question">${questionText}</p>
 
-            <form action="${pageContext.request.contextPath}/answer" method="post" class="answer-options">
+            <form action="${pageContext.request.contextPath}/game" method="post" class="answer-options">
                 <c:forEach items="${answers}" var="answer" varStatus="status">
                     <button type="submit" name="answer" value="${status.index}" class="custom-button">${answer.text}</button>
                 </c:forEach>
