@@ -35,11 +35,11 @@ class MainControllerTest {
 
     @Test
     void shouldStartGameAndRedirect() throws ServletException, IOException {
-        when(req.getParameter(ATTR_PLAYER_NAME)).thenReturn("Artem");
+        when(req.getParameter(ATTR_PLAYER_NAME)).thenReturn("Player");
 
         controller.doPost(req, resp);
 
-        verify(session).setAttribute(ATTR_PLAYER_NAME, "Artem");
+        verify(session).setAttribute(ATTR_PLAYER_NAME, "Player");
         verify(session).setAttribute(ATTR_CURRENT_QUESTION_ID, START_QUESTION_ID);
         verify(resp).sendRedirect("/game");
     }
