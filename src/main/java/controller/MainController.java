@@ -35,7 +35,8 @@ public class MainController extends HttpServlet {
         Integer currentId = GameUtil.getCurrentQuestionId(session);
 
         if (playerName == null || currentId == null) {
-            restartGame(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/start");
+            return;
         }
 
         showCurrentQuestion(req, resp, session);
@@ -106,18 +107,14 @@ public class MainController extends HttpServlet {
         Question question = QuestData.getQuestionById(currentId);
 
         if (question == null) {
-            restartGame(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/start");
+            return;
         }
 
         setStatisticalAttributes(req, session);
         req.setAttribute(ATTR_QUESTION_TEXT, question.getText());
         req.setAttribute(ATTR_ANSWERS, question.getAnswers());
         req.getRequestDispatcher("/WEB-INF/views/question.jsp").forward(req, resp);
-    }
-
-    private void restartGame(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute(ATTR_INTRO, QuestData.getIntro());
-        req.getRequestDispatcher("/WEB-INF/views/start.jsp").forward(req, resp);
     }
 
     private void setStatisticalAttributes(HttpServletRequest req, HttpSession session) {
